@@ -13,7 +13,8 @@
 		}
 
 		html {
-			height: 100%;
+			/* No fixed height: the document grows and scrolls on its own, so
+			   zoomed-in content is never clipped. */
 			background-image: linear-gradient(#f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
 			background-size: 200% 200%;
 			animation: rainbow 12s linear infinite;
@@ -23,27 +24,39 @@
 		}
 
 		body {
+			/* Flexbox + auto margins on #box centre it. The auto margins collapse
+			   to zero once the content is taller than the viewport, so the top of
+			   the box stays reachable and the page scrolls at any zoom level. */
 			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100%;
+			min-height: 100vh;
+			min-height: 100svh;
+			padding: 1rem;
 
-			font-family: sans-serif;
-			font-size: 2vh;
+			font-family: system-ui, sans-serif;
+			/* rem, not vh: rem follows browser zoom, viewport units do not. */
+			font-size: 1.25rem;
 			line-height: 1.5;
+			-webkit-text-size-adjust: 100%;
+			text-size-adjust: 100%;
 		}
 
 		#box {
-			margin: 10%;
-
-			padding: 5vh;
+			margin: auto;
+			width: min(100%, 40rem);
+			padding: 2rem;
 			background-color: #fff8;
 			color: #222;
 			border: 2px solid #fff;
-			border-radius: 30px;
+			border-radius: 1.5rem;
+			overflow-wrap: break-word;
 
 			transition-property: box-shadow, transform;
 			transition-duration: 0.2s;
+		}
+
+		/* Vertical rhythm for the text inside the box. */
+		#box > * + * {
+			margin-top: 0.75em;
 		}
 		#box:hover {
 			box-shadow: 0 0 20px #888;
@@ -78,6 +91,21 @@
 			}
 			99% {
 				transform-origin: bottom left;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			html {
+				animation: none;
+			}
+			#hi {
+				animation: none;
+			}
+			#box {
+				transition: none;
+			}
+			#box:hover {
+				transform: none;
 			}
 		}
 	</style>
