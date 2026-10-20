@@ -1,0 +1,1081 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Familienwochenende in Darmstadt • 4. Advent 2026</title>
+    <style>
+      :root {
+        --bg: #faf8f5;
+        --card-bg: #ffffff;
+        --text: #2b2b2b;
+        --text-muted: #66635e;
+        --accent-pine: #284236;
+        --accent-pine-light: #eaf1ed;
+        --accent-warm: #a65b44;
+        --accent-warm-light: #fbf0ec;
+        --border: #e8e3dc;
+        --gold: #b38634;
+        --shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+        --radius: 14px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5;
+        padding: 2.5rem 1rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        max-width: 880px;
+        width: 100%;
+      }
+
+      a {
+        color: var(--accent-warm);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(166, 91, 68, 0.35);
+      }
+
+      a:hover {
+        border-bottom-color: var(--accent-warm);
+      }
+
+      /* ---------- HEADER ---------- */
+      header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .meta-tag {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        font-weight: 700;
+        color: var(--accent-warm);
+        background-color: var(--accent-warm-light);
+        padding: 0.35rem 0.85rem;
+        border-radius: 999px;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-family: "Georgia", "Playfair Display", serif;
+        font-size: 2.5rem;
+        font-weight: normal;
+        color: var(--accent-pine);
+        letter-spacing: -0.01em;
+        margin-bottom: 0.6rem;
+      }
+
+      .subtitle {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        max-width: 620px;
+        margin: 0 auto 1.2rem;
+      }
+
+      .visitor-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem;
+        font-size: 0.83rem;
+        color: var(--text-muted);
+        margin-bottom: 1.75rem;
+      }
+
+      .badge {
+        background: #f1ede6;
+        padding: 0.25rem 0.65rem;
+        border-radius: 6px;
+      }
+
+      .hero-photo {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        background: var(--card-bg);
+      }
+
+      .hero-photo img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center 52%;
+      }
+
+      .hero-photo figcaption {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-align: left;
+        padding: 0.55rem 0.9rem;
+      }
+
+      /* ---------- TAGESKARTEN ---------- */
+      .schedule {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .day-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.6rem 1.6rem 1.4rem;
+        box-shadow: var(--shadow);
+      }
+
+      .day-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #f0ece6;
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.35rem;
+      }
+
+      .day-title {
+        font-family: "Georgia", serif;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: var(--accent-pine);
+      }
+
+      .day-tag {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--accent-warm);
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-family: "Georgia", serif;
+        font-size: 1.02rem;
+        font-weight: normal;
+        color: var(--accent-pine);
+        margin: 1.75rem 0 1rem;
+      }
+
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+
+      /* ---------- TIMELINE ---------- */
+      .timeline {
+        list-style: none;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 0.35rem;
+        top: 0.6rem;
+        bottom: 0.6rem;
+        width: 2px;
+        background: #e4ddd3;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 1.35rem;
+      }
+
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -1.5rem;
+        top: 0.5rem;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent-pine);
+        box-shadow: 0 0 0 3px var(--card-bg);
+      }
+
+      .timeline-time {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--accent-pine);
+        background: var(--accent-pine-light);
+        padding: 0.15rem 0.55rem;
+        border-radius: 999px;
+        margin-bottom: 0.3rem;
+      }
+
+      .timeline-content strong {
+        color: var(--text);
+      }
+
+      .timeline-content p {
+        color: var(--text-muted);
+        font-size: 0.94rem;
+        margin-top: 0.1rem;
+      }
+
+      .tl-photo {
+        margin-top: 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .tl-photo img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        max-height: 430px;
+        margin: 0 auto;
+      }
+
+      .tl-photo figcaption {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        padding: 0.45rem 0.75rem;
+      }
+
+      .tl-photo p {
+        margin-top: 0;
+      }
+
+      /* ---------- MENÜKASTEN ---------- */
+      .menu-box {
+        background: #fdfaf6;
+        border-left: 3px solid var(--gold);
+        padding: 0.85rem 1.1rem;
+        border-radius: 0 8px 8px 0;
+        margin-top: 0.6rem;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      .menu-box span {
+        display: block;
+        font-weight: 700;
+        color: var(--gold);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-bottom: 0.3rem;
+      }
+
+      .menu-box li {
+        margin-left: 1rem;
+      }
+
+      /* ---------- HINWEISKASTEN ---------- */
+      .note {
+        background: var(--accent-warm-light);
+        border-radius: 10px;
+        padding: 0.8rem 1rem;
+        font-size: 0.88rem;
+        color: #6f4335;
+        margin-top: 1.35rem;
+      }
+
+      /* ---------- WEGE / KARTEN ---------- */
+      .route-grid {
+        display: grid;
+        /* minmax(0, …) statt 1fr: sonst richten sich die Spalten nach dem
+           längsten Wort und sind unterschiedlich breit */
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: start;
+        gap: 1.1rem;
+        margin-top: 1rem;
+      }
+
+      .route-card {
+        min-width: 0;
+        background: #f8f6f2;
+        border: 1px dashed var(--border);
+        border-radius: 12px;
+        padding: 1rem 1rem 1.1rem;
+        text-align: center;
+      }
+
+      .route-card h4 {
+        font-family: "Georgia", serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: var(--accent-pine);
+        margin-bottom: 0.15rem;
+      }
+
+      .route-meta {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--accent-warm);
+        margin-bottom: 0.8rem;
+      }
+
+      .route-card a {
+        display: inline-block;
+        border-bottom: 0;
+      }
+
+      /* ganze Karte, nichts abgeschnitten */
+      .route-card img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        max-height: 620px;
+        margin: 0 auto;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        cursor: zoom-in;
+      }
+
+      .zoom {
+        display: block;
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-top: 0.55rem;
+      }
+
+      .route-card p {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-align: left;
+        margin-top: 0.75rem;
+      }
+
+      .map-caption {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-top: 0.4rem;
+      }
+
+      /* ---------- FRÜHSTÜCKS-SPOT ---------- */
+      .spot {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 1.25rem;
+        align-items: center;
+        background: #f8f6f2;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.1rem;
+        margin-top: 1.35rem;
+      }
+
+      .spot img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-height: 190px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .spot h3 {
+        font-family: "Georgia", serif;
+        font-size: 1.15rem;
+        font-weight: normal;
+        color: var(--accent-pine);
+        margin-bottom: 0.35rem;
+      }
+
+      .spot p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-bottom: 0.6rem;
+      }
+
+      .spot h3 a {
+        border-bottom-color: rgba(40, 66, 54, 0.35);
+        color: var(--accent-pine);
+      }
+
+      .spot h3 a:hover {
+        border-bottom-color: var(--accent-pine);
+      }
+
+      /* ---------- IDEENLISTE ---------- */
+      .pill-time {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #ffffff;
+        background: var(--accent-pine);
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        margin-bottom: 0.5rem;
+      }
+
+      .idea-list {
+        list-style: none;
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        margin-top: 0.4rem;
+      }
+
+      .idea-list li {
+        position: relative;
+        padding-left: 1.15rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .idea-list li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--accent-warm);
+      }
+
+      /* ---------- OPTIONEN ---------- */
+      .options-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 0.9rem;
+      }
+
+      .option-pill {
+        background: #f8f6f2;
+        border: 1px dashed var(--border);
+        border-radius: 8px;
+        padding: 0.85rem 0.95rem;
+        font-size: 0.87rem;
+        color: var(--text-muted);
+      }
+
+      .option-pill strong {
+        display: block;
+        color: var(--accent-pine);
+        margin-bottom: 0.2rem;
+      }
+
+      .option-pill img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 0.7rem;
+      }
+
+      .option-meta {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--accent-warm);
+        margin-bottom: 0.4rem;
+      }
+
+      .option-pill p {
+        margin-top: 0;
+      }
+
+      /* ---------- KONZERT-KARTE ---------- */
+      .highlight-card {
+        background: var(--accent-pine);
+        color: #ffffff;
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        margin-top: 1.1rem;
+        display: grid;
+        grid-template-columns: 1.35fr 1fr;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      .highlight-card h3 {
+        font-family: "Georgia", serif;
+        font-size: 1.3rem;
+        font-weight: normal;
+        margin-bottom: 0.5rem;
+        color: #f7e6ca;
+      }
+
+      .highlight-card p {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        opacity: 0.92;
+      }
+
+      .highlight-card a {
+        color: #f7e6ca;
+        border-bottom-color: rgba(247, 230, 202, 0.5);
+      }
+
+      .highlight-badge-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+        gap: 0.6rem;
+        margin: 1rem 0 0.9rem;
+      }
+
+      .h-badge {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0.45rem 0.7rem;
+        border-radius: 8px;
+      }
+
+      .h-badge span {
+        display: block;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.75;
+      }
+
+      .h-badge strong {
+        font-size: 0.93rem;
+        font-weight: 600;
+      }
+
+      .highlight-card figure img {
+        display: block;
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        object-position: center 42%;
+        border-radius: 10px;
+      }
+
+      .highlight-card figure figcaption {
+        font-size: 0.72rem;
+        opacity: 0.7;
+        margin-top: 0.45rem;
+      }
+
+      /* ---------- HUNDE-BOX ---------- */
+      .dog-box {
+        background: #f0f7f3;
+        border: 1px solid #d4e8dd;
+        color: #274836;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        margin-top: 0.9rem;
+        font-size: 0.87rem;
+      }
+
+      /* ---------- FOOTER ---------- */
+      footer {
+        text-align: center;
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+
+      .footer-quote {
+        font-family: "Georgia", serif;
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--accent-pine);
+        margin-bottom: 0.4rem;
+      }
+
+      /* ---------- RESPONSIVE ---------- */
+      @media (max-width: 720px) {
+        h1 {
+          font-size: 2rem;
+        }
+        .options-grid,
+        .highlight-card,
+        .spot {
+          grid-template-columns: 1fr;
+        }
+        .highlight-card {
+          gap: 1.1rem;
+        }
+        .spot img {
+          max-height: 220px;
+        }
+        .hero-photo img {
+          height: 210px;
+        }
+      }
+
+      /* ---------- PRINT ---------- */
+      @media print {
+        body {
+          background: #fff;
+          padding: 0;
+        }
+        .day-card {
+          box-shadow: none;
+          border: 1px solid #ccc;
+          page-break-inside: avoid;
+        }
+        .highlight-card {
+          background: #284236 !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .highlight-card img,
+        .hero-photo img,
+        .spot img,
+        .route-card img,
+        .tl-photo img,
+        .option-pill img {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header>
+        <div class="meta-tag">4. Advent · 18.–20. Dezember 2026</div>
+        <h1>Familienwochenende in Darmstadt</h1>
+
+        <div class="visitor-badges">
+          <span class="badge">Ina &amp; Marcus</span>
+          <span class="badge">Annika &amp; Romy</span>
+          <span class="badge">Oma Ulla</span>
+          <span class="badge">Oma &amp; Opa</span>
+          <span class="badge">🐾 Charlie</span>
+          <span class="badge">Lizanne &amp; Jannik</span>
+        </div>
+
+        <figure class="hero-photo">
+          <picture>
+            <source srcset="weihnachtsmarkt.avif" type="image/avif" />
+            <img
+              src="weihnachtsmarkt.webp"
+              alt="Darmstädter Weihnachtsmarkt in der Abenddämmerung"
+            />
+          </picture>
+        </figure>
+      </header>
+
+      <!-- PROGRAMM -->
+      <div class="schedule">
+        <!-- FREITAG -->
+        <section class="day-card">
+          <div class="day-header">
+            <h2 class="day-title">Freitag</h2>
+            <span class="day-tag">18. Dezember · Ankunft</span>
+          </div>
+
+          <ul class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-time">Nachmittag</div>
+              <div class="timeline-content">
+                <strong>Ankommen &amp; Wohnungstour</strong>
+                <p>
+                  Beide Autos rollen an, Koffer ins
+                  <a
+                    href="https://maps.app.goo.gl/JtjGU858PW8pJqYJ8"
+                    target="_blank"
+                    rel="noopener"
+                    >ipartment</a
+                  >, dann geht's zu uns: Wohnung ansehen, Kaffee und Kuchen.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-time">Spätnachmittag</div>
+              <div class="timeline-content">
+                <strong>Entspanntes Beisammensein</strong>
+                <p>
+                  Kleiner Spaziergang durchs Viertel, eine erste Runde
+                  Gesellschaftsspiele oder einfach zusammensitzen und plaudern.
+                </p>
+                <figure class="tl-photo">
+                  <picture>
+                    <source srcset="viertel.avif" type="image/avif" />
+                    <img
+                      src="viertel.webp"
+                      alt="Handgezeichnete Karte unseres Viertels mit Lui Café, Eislabor und The Rug"
+                    />
+                  </picture>
+                  <figcaption>
+                    Eine Zeichnung von unserer Gegend, gezeichnet von mir - in
+                    der Mitte das Haus mit dem Herz sind wir.
+                  </figcaption>
+                </figure>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-time">Abend</div>
+              <div class="timeline-content">
+                <strong>Abendessen bei uns</strong>
+                <div class="menu-box">
+                  <span>Unser Menü</span>
+                  <ul>
+                    <li>
+                      Janniksalat - Rohkostmix, Snacktomaten, Kichererbsen
+                    </li>
+                    <li>Pilzcremesuppe im Brotlaib</li>
+                    <li>Erdbeer-Marshmallow-Waffeln</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="note">
+            🔎 <strong>Kurze Abstimmung am Abend:</strong> am nächsten Morgen
+            9:00 aufbrechen mit schönem Morgenspaziergang, oder erst 9:30 und
+            dann ohne Spaziergang?
+          </div>
+        </section>
+
+        <!-- SAMSTAG -->
+        <section class="day-card">
+          <div class="day-header">
+            <h2 class="day-title">Samstag</h2>
+            <span class="day-tag">19. Dezember · Brunch &amp; Konzert</span>
+          </div>
+
+          <h3 class="section-title">Vormittag · Brunch in der Stadt</h3>
+
+          <ul class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-time">9:00 / 9:30</div>
+              <div class="timeline-content">
+                <strong
+                  >Treffen am
+                  <a
+                    href="https://maps.app.goo.gl/JtjGU858PW8pJqYJ8"
+                    target="_blank"
+                    rel="noopener"
+                    >ipartment</a
+                  ></strong
+                >
+                <p>
+                  Treffen um 9:00 bzw. 9:30 am Apartment. Von dort sind es nur
+                  wenige Minuten zur Tram-Haltestelle.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-time">9:15 / 9:45</div>
+              <div class="timeline-content">
+                <strong
+                  >Tram ab
+                  <a
+                    href="https://maps.app.goo.gl/iW76k1fRC97oxTwj9"
+                    target="_blank"
+                    rel="noopener"
+                    >TZ Rhein Main</a
+                  ></strong
+                >
+                <p>
+                  Auf dem Weg zur Haltestelle laufen wir über eine sehr coole
+                  Radbrücke! Mit der Tram geht's dann in die Innenstadt.
+                </p>
+                <figure class="tl-photo">
+                  <picture>
+                    <source srcset="radbrücke.avif" type="image/avif" />
+                    <img
+                      src="radbrücke.webp"
+                      alt="Die abends rot beleuchtete Radbrücke in Darmstadt"
+                    />
+                  </picture>
+                </figure>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="section-title">Zwei Wege zum Frühstück</h3>
+
+          <div class="route-grid">
+            <div class="route-card">
+              <h4>Mit Morgenspaziergang</h4>
+              <div class="route-meta">
+                Ausstieg Pallaswiesenstraße · 9:25 · 1,9 km
+              </div>
+              <a href="route-lang.webp" target="_blank" rel="noopener">
+                <picture>
+                  <source srcset="route-lang.avif" type="image/avif" />
+                  <img
+                    src="route-lang.webp"
+                    alt="Karte: Weg von der Haltestelle Pallaswiesenstraße durch den Herrngarten zum Frühstückscafé"
+                  />
+                </picture>
+              </a>
+              <p>Durch den schönen Prinz-Georg-Garten und den Herrngarten!</p>
+            </div>
+
+            <div class="route-card">
+              <h4>Ohne Spaziergang</h4>
+              <div class="route-meta">Ausstieg Luisenplatz · 9:55 · 0,3 km</div>
+              <a href="route-kurz.webp" target="_blank" rel="noopener">
+                <picture>
+                  <source srcset="route-kurz.avif" type="image/avif" />
+                  <img
+                    src="route-kurz.webp"
+                    alt="Karte: kurzer Weg vom Luisenplatz zum Frühstückscafé"
+                  />
+                </picture>
+              </a>
+              <p>Vom Luisenplatz sind es nur wenige Schritte bis zum Tisch.</p>
+            </div>
+          </div>
+
+          <div class="spot">
+            <picture>
+              <source srcset="woodrich.avif" type="image/avif" />
+              <img
+                src="woodrich.webp"
+                alt="Innenansicht des Woodrich Café mit Holztischen und Rattanlampen"
+              />
+            </picture>
+            <div>
+              <span class="pill-time">10:00 · Tisch ist reserviert</span>
+              <h3>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&amp;query=WOODRICH+Darmstadt"
+                  target="_blank"
+                  rel="noopener"
+                  >Frühstück bei WOODRICH</a
+                >
+              </h3>
+              <p>
+                Frühstückscafe direkt in der Innenstadt mit viel Platz für uns
+                und Charlie!
+              </p>
+            </div>
+          </div>
+
+          <h3 class="section-title">
+            Nach dem Brunch · Zwei Runden zur Wahl (oder beide)
+          </h3>
+
+          <div class="options-grid">
+            <div class="option-pill">
+              <picture>
+                <source srcset="campus.avif" type="image/avif" />
+                <img src="campus.webp" alt="Der TU-Campus in Darmstadt" />
+              </picture>
+              <strong>Runde A · TU-Campus</strong>
+            </div>
+            <div class="option-pill">
+              <picture>
+                <source srcset="mathildenhöhe.avif" type="image/avif" />
+                <img
+                  src="mathildenhöhe.webp"
+                  alt="Die Mathildenhöhe mit Hochzeitsturm und Jugendstil-Häusern"
+                />
+              </picture>
+              <strong>Runde B · Mathildenhöhe &amp; Woog</strong>
+            </div>
+          </div>
+
+          <h3 class="section-title">Solange wir einsingen</h3>
+
+          <ul class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-time">14:30–16:30</div>
+              <div class="timeline-content">
+                <p>
+                  Lizanne und ich müssen um 14:30 zum Einsingen. Bis zum
+                  Konzertbeginn habt ihr frei, hier ein paar Ideen:
+                </p>
+                <ul class="idea-list">
+                  <li>über den Weihnachtsmarkt bummeln</li>
+                  <li>im ipartment ausruhen</li>
+                  <li>Darmstadts Cafés testen</li>
+                  <li>mit der Tram zum Orangeriegarten fahren</li>
+                </ul>
+                <div class="dog-box">
+                  🐾 <strong>Tipp für Charlie:</strong> Der Orangeriegarten hat
+                  eine eigene, eingezäunte Hundewiese :)
+                </div>
+                <figure class="tl-photo">
+                  <picture>
+                    <source srcset="orangerie.avif" type="image/avif" />
+                    <img
+                      src="orangerie.webp"
+                      alt="Der barock angelegte Orangeriegarten in Darmstadt"
+                    />
+                  </picture>
+                </figure>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="section-title">Konzert am Nachmittag</h3>
+          <div class="highlight-card">
+            <div>
+              <h3>🎵 Hoch über Bethlehem ein Stern</h3>
+              <p>
+                Sängerinnen und Sänger aller Altersstufen gestalten ein buntes
+                Programm mit Advents- und Weihnachtsliedern aus aller Welt.
+              </p>
+              <div class="highlight-badge-grid">
+                <div class="h-badge">
+                  <span>Einsingen (nur Lizanne und ich)</span>
+                  <strong>14:30 Uhr</strong>
+                </div>
+                <div class="h-badge">
+                  <span>Konzert (alle)</span>
+                  <strong>16:30 Uhr</strong>
+                </div>
+                <div class="h-badge">
+                  <span>Dauer</span>
+                  <strong>ca. 2 Stunden</strong>
+                </div>
+              </div>
+              <p>
+                <a
+                  href="https://bistummainz.de/pfarrei/darmstadt-st-ludwig/startseiten/termine/veranstaltung/Adventskonzert-der-Akademie-fuer-Tonkunst"
+                  target="_blank"
+                  rel="noopener"
+                  >Konzertinfos ansehen →</a
+                >
+              </p>
+            </div>
+            <figure>
+              <picture>
+                <source srcset="kuppelkirche.avif" type="image/avif" />
+                <img
+                  src="kuppelkirche.webp"
+                  alt="Die Kuppelkirche St. Ludwig in Darmstadt mit ihrer großen Kuppel"
+                />
+              </picture>
+              <figcaption>
+                Kuppelkirche St. Ludwig, Wilhelminenplatz 9
+              </figcaption>
+            </figure>
+          </div>
+
+          <h3 class="section-title">Abend</h3>
+
+          <ul class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-time">19:00</div>
+              <div class="timeline-content">
+                <strong
+                  >Abendessen in der
+                  <a
+                    href="https://maps.app.goo.gl/Uwvv5jGd8QYTj6bF8"
+                    target="_blank"
+                    rel="noopener"
+                    >L'Osteria</a
+                  ></strong
+                >
+                <p>
+                  Tisch ist reserviert, das Restaurant ist nur 100 Meter von der
+                  Kuppelkirche entfernt.
+                </p>
+                <figure class="tl-photo">
+                  <picture>
+                    <source srcset="losteria.avif" type="image/avif" />
+                    <img
+                      src="losteria.webp"
+                      alt="Gastraum der L'Osteria mit Holztischen und warmem Licht"
+                    />
+                  </picture>
+                </figure>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-time">Danach</div>
+              <div class="timeline-content">
+                <strong>Weihnachtsmarkt</strong>
+                <p>
+                  Falls es zeitlich passt, laufen wir über den schönen
+                  Darmstädter Weihnachtsmarkt!
+                </p>
+                <figure class="tl-photo">
+                  <picture>
+                    <source srcset="weihnachtsmarkt.avif" type="image/avif" />
+                    <img
+                      src="weihnachtsmarkt.webp"
+                      alt="Der Darmstädter Weihnachtsmarkt in der Abenddämmerung"
+                    />
+                  </picture>
+                </figure>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-time">Später</div>
+              <div class="timeline-content">
+                <strong>Zu uns oder ins Bett</strong>
+                <p>
+                  Rückweg zur Wohnung: Wer möchte, lässt den Tag bei
+                  Gesellschaftsspielen und Kakao ausklingen. Wer müde ist, hüpft
+                  direkt ins Hotelbett.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- SONNTAG -->
+        <section class="day-card">
+          <div class="day-header">
+            <h2 class="day-title">Sonntag</h2>
+            <span class="day-tag">20. Dezember · Abreise</span>
+          </div>
+
+          <ul class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-time">Vormittag</div>
+              <div class="timeline-content">
+                <strong>Großes Advents-Frühstück bei uns</strong>
+                <p>
+                  Entspanntes Zusammenkommen in unserer Wohnung: Ofenfrische
+                  Brötchen mit veganer Aufschnittauswahl und selbstgemachtem
+                  Hummus.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-time">Danach</div>
+              <div class="timeline-content">
+                <strong>Abschied & Heimreise</strong>
+                <p>Abreise beider Autos, sobald es für alle passt.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
